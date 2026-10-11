@@ -1,0 +1,27 @@
+column,type,description,category,used_as
+date,date (YYYY-MM-DD),Week-start date of the observation,identifier,not a model feature
+latitude,float,Grid-cell center latitude (decimal degrees),identifier,not a model feature
+longitude,float,Grid-cell center longitude (decimal degrees),identifier,not a model feature
+grid_id,string,Unique grid-cell identifier (RxxxCxxx),identifier,not a model feature
+temperature,float (deg C),Mean air temperature for the week,weather,predictor
+humidity,float (%),Mean relative humidity for the week,weather,predictor
+wind_speed,float (km/h),Mean wind speed for the week,weather,predictor
+wind_direction,float (degrees 0-360),Mean wind direction for the week,weather,predictor
+rainfall,float (mm),Total rainfall for the week,weather,predictor
+pressure,float (hPa),Mean atmospheric pressure for the week,weather,predictor
+ndvi,float (-1 to 1),Normalized Difference Vegetation Index (vegetation greenness),vegetation,predictor
+ndmi,float (-1 to 1),Normalized Difference Moisture Index (vegetation/fuel moisture),vegetation,predictor
+elevation,float (m),Terrain elevation,terrain,predictor
+slope,float (degrees),Terrain slope,terrain,predictor
+aspect,float (degrees 0-360),Terrain aspect (downhill-facing compass direction),terrain,predictor
+land_cover,string,Simplified land-cover class label,vegetation,predictor (as land_cover_code)
+land_cover_code,int,Numeric code for land_cover (see config.LAND_COVER_CLASSES),vegetation,predictor
+fire_count_previous_7_days,int (0/1),Fire ignition flag observed in the previous week (history),historical fire,predictor
+fire_count_previous_30_days,float,Rolling count of fire ignitions over the previous ~4 weeks,historical fire,predictor
+days_since_rain,int (days),Consecutive prior days with negligible rainfall,derived weather,predictor
+temperature_7day_mean,float (deg C),Mean temperature over the previous ~2 weeks (uses only past data),derived weather,predictor
+humidity_7day_mean,float (%),Mean humidity over the previous ~2 weeks (uses only past data),derived weather,predictor
+rainfall_7day_sum,float (mm),Summed rainfall over the previous ~2 weeks (uses only past data),derived weather,predictor
+ndvi_change,float,Week-over-week change in NDVI,derived vegetation,predictor
+temperature_anomaly,float (deg C),Deviation of current temperature from the cell's historical running mean,derived weather,predictor
+fire_target,int (0/1),TARGET: does a fire occur in this cell during the NEXT prediction window?,target,target (label)

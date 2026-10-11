@@ -1,0 +1,17 @@
+# Base Streamlit theme -- sets the colours native widgets (buttons, sliders,
+# selectboxes, tabs) inherit automatically. Fine-grained visual polish on
+# top of this lives in 07_Dashboard/theme.py (custom CSS).
+[theme]
+base = "dark"
+primaryColor = "#FF7A3D"
+backgroundColor = "#0A0C0F"
+secondaryBackgroundColor = "#15181D"
+textColor = "#F2F1ED"
+font = "sans serif"
+
+[server]
+headless = true
+enableXsrfProtection = true
+
+[browser]
+gatherUsageStats = false

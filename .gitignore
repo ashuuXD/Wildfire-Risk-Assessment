@@ -1,0 +1,22 @@
+# Environment and caches
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.vscode/
+pyrightconfig.json
+
+# Secrets
+.streamlit/secrets.toml
+.env
+
+# Generated data and models (recreated by run_demo.py)
+02_Data/raw/
+02_Data/processed/
+05_Models/*.joblib
+
+# Personal / internal docs
+PROJECT_BLUEPRINT.md
+08_Documentation/VIVA_QUESTIONS_AND_ANSWERS.md
+08_Documentation/PRESENTATION_CONTENT.md
+09_Papers/
